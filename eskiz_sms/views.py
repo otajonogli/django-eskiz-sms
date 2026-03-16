@@ -15,7 +15,7 @@ def send_sms(phone, message, from_name=None, from_app=None):
     
     payload = {
             'mobile_phone': phone,
-            'message': message[:160],  # Limit to 160 characters
+            'message': message,
             'from': from_name or eskiz.from_name or "4546",
             'callback_url': eskiz.callback_url
         }
